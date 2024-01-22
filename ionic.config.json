@@ -1,0 +1,7 @@
+{
+  "name": "destinovacaciones",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

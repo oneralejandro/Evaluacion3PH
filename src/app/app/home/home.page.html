@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-button [routerLink]="['/destinations']">destinations</ion-button>
+    <ion-button [routerLink]="['/camera']">Camera</ion-button>
+    
+    <ion-item *ngFor="let place of places">
+     
+      <div>Valor Actual: {{ place.inputValue }}</div>
+
+      
+      <ion-button (click)="AgregarPrecio(place)">Cotizar</ion-button>
+      
+      <ion-icon name="airplane" slot="end"></ion-icon>
+      <ion-icon name="camera-outline" slot="end"></ion-icon>
+      <ion-icon name="trash-outline" slot="end" (click)="eliminarDestino(place)"></ion-icon>
+      
+      <ion-thumbnail slot="start">
+        <img [src]="place.image" *ngIf="place.image" />
+      </ion-thumbnail>
+      
+      <ion-label>
+        {{ place.name }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

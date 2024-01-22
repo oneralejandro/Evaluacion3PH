@@ -1,0 +1,10 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>camera</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content CLASS="ion-padding">
+ <ion-button (click)="takePhoto()">Take Photo</ion-button>
+ <img *ngIf="photo != null" [src]="photo.webPath" alt="Photo"/>
+</ion-content>
